@@ -8,3 +8,6 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
+
+#rn config TODO replace my package
+-keep class com.facebook.react.BuildConfig { *; }

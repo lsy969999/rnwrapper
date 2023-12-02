@@ -3,8 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "aos:dev:debug": "react-native run-android --mode=devDebug --appIdSuffix dev",
+    "aos:dev:release": "react-native run-android --mode=devRelease --appIdSuffix dev",
+    "aos:prd:debug": "react-native run-android --mode=prdDebug --appIdSuffix prd",
+    "aos:prd:release": "react-native run-android --mode=prdRelease --appIdSuffix prd",
+    "ios:dev:debug": "react-native run-ios --scheme 'devDebug'",
+    "ios:dev:release": "react-native run-ios --scheme 'devRelease'",
+    "ios:prd:debug": "react-native run-ios --scheme 'prdDebug'",
+    "ios:prd:release": "react-native run-ios --scheme 'prdRelease'",
     "lint": "eslint .",
     "start": "react-native start --port 9988",
     "test": "jest"
