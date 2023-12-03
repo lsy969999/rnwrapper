@@ -88,7 +88,7 @@ android {
         applicationId "com.rnwrapper"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode project.env.get("RNW_A_VERSION_CODE")
+        versionCode 1
         versionName project.env.get("RNW_APP_VER")
         resValue "string", "build_config_package", "com.rnwrapper"
         resValue "string", "app_name", project.env.get("RNW_APP_NAME")
