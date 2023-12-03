@@ -1,6 +1,16 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
 
+//rn config
+project.ext.envConfigFiles = [
+        devDebug: ".env.dev",
+        devRelease: ".env.prd",
+        prdDebug: ".env.dev",
+        prdRelease: ".env.prd",
+        anothercustombuild: ".env",
+]
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -81,6 +91,7 @@ android {
         versionCode 1
         versionName "1.0"
         resValue "string", "build_config_package", "com.rnwrapper"
+        resValue "string", "app_name", project.env.get("RNW_APP_NAME")
     }
     signingConfigs {
         debug {
@@ -134,13 +145,3 @@ dependencies {
 }
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
-
-//rn config
-project.ext.envConfigFiles = [
-        devDebug: ".env.dev",
-        devRelease: ".env.prd",
-        prdDebug: ".env.dev",
-        prdRelease: ".env.prd",
-        anothercustombuild: ".env",
-]
-apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
