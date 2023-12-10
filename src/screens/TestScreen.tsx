@@ -5,8 +5,16 @@ import {
   NativeModules,
   Text,
   View,
+  AppState,
 } from 'react-native';
+import {MMKV} from 'react-native-mmkv';
+import {
+  getUniqueId,
+  getManufacturer,
+  getVersion,
+} from 'react-native-device-info';
 
+export const storage = new MMKV();
 const TestScreen = ({navigation}: any) => {
   const {ModuleTestModule} = NativeModules;
   const onPress = () => {
@@ -38,13 +46,26 @@ const TestScreen = ({navigation}: any) => {
     ModuleTestModule.createTestSendEvent();
   };
 
+  const appStateFn = (state: any) => {
+    console.log(`state: ${state}`);
+  };
+
+  const deviceInfo = async () => {
+    console.log(await getUniqueId());
+    console.log(await getManufacturer());
+    console.log(getVersion());
+  };
+
   useEffect(() => {
     const eventEmitter = new NativeEventEmitter(NativeModules.ModuleTestModule);
     let eventListener = eventEmitter.addListener('EventReminder', event => {
       console.log(event.eventProperty);
     });
+
+    const sub = AppState.addEventListener('change', appStateFn);
     return () => {
       eventListener.remove();
+      sub.remove();
       console.log('test remove useEffect');
     };
   }, []);
@@ -67,6 +88,7 @@ const TestScreen = ({navigation}: any) => {
         color="#841584"
         onPress={onPress4}
       />
+      <Button title="info" onPress={deviceInfo} />
       <Button title="Go to Back" onPress={() => navigation.goBack()} />
     </View>
   );
