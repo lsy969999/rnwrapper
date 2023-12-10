@@ -11,3 +11,9 @@
 
 #rn config TODO replace my package
 -keep class com.facebook.react.BuildConfig { *; }
+
+#react-native-device-info
+-keepclassmembers class com.android.installreferrer.api.** {
+  *;
+}
+-keep class com.google.android.gms.common.** {*;}
