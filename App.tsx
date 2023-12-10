@@ -2,7 +2,6 @@ import React from 'react';
 import {
   SafeAreaView,
   StatusBar,
-  StyleSheet,
   Text,
   useColorScheme,
   View,
@@ -11,7 +10,6 @@ import {
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Config from 'react-native-config';
 import {WebView} from 'react-native-webview';
-
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -37,7 +35,10 @@ function App(): JSX.Element {
 
 const MyWebView = () => {
   return (
-    <WebView source={{uri: 'http://192.168.25.35:8083'}} style={{flex: 1}} />
+    <WebView
+      style={{flex: 1}}
+      webviewDebuggingEnabled={true}
+      source={{uri: 'http://192.168.25.35:8080'}} />
   );
 };
 
