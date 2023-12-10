@@ -12,6 +12,8 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3D01B7C42B25A19600BF13D6 /* RCTModuleTestModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01B7C32B25A19600BF13D6 /* RCTModuleTestModule.m */; };
+		3D01B7C52B25A19600BF13D6 /* RCTModuleTestModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01B7C32B25A19600BF13D6 /* RCTModuleTestModule.m */; };
 		3DB754202B1B5E6800F23407 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7541F2B1B5E6800F23407 /* Config.xcconfig */; };
 		3DB754212B1B5E6800F23407 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7541F2B1B5E6800F23407 /* Config.xcconfig */; };
 		7699B88040F8A987B510C191 /* libPods-rnwrapper-rnwrapperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-rnwrapper-rnwrapperTests.a */; };
@@ -40,6 +42,8 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = rnwrapper/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-rnwrapper-rnwrapperTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rnwrapper-rnwrapperTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-rnwrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnwrapper.debug.xcconfig"; path = "Target Support Files/Pods-rnwrapper/Pods-rnwrapper.debug.xcconfig"; sourceTree = "<group>"; };
+		3D01B7C22B25A17500BF13D6 /* RCTModuleTestModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTModuleTestModule.h; sourceTree = "<group>"; };
+		3D01B7C32B25A19600BF13D6 /* RCTModuleTestModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTModuleTestModule.m; sourceTree = "<group>"; };
 		3DB7541F2B1B5E6800F23407 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-rnwrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnwrapper.release.xcconfig"; path = "Target Support Files/Pods-rnwrapper/Pods-rnwrapper.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-rnwrapper-rnwrapperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnwrapper-rnwrapperTests.debug.xcconfig"; path = "Target Support Files/Pods-rnwrapper-rnwrapperTests/Pods-rnwrapper-rnwrapperTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				3D01B7C22B25A17500BF13D6 /* RCTModuleTestModule.h */,
+				3D01B7C32B25A19600BF13D6 /* RCTModuleTestModule.m */,
 			);
 			name = rnwrapper;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E356F31AD99517003FC87E /* rnwrapperTests.m in Sources */,
+				3D01B7C52B25A19600BF13D6 /* RCTModuleTestModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				3D01B7C42B25A19600BF13D6 /* RCTModuleTestModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
